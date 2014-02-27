@@ -12,7 +12,6 @@
 
 (defn get-data []
   (let [data (load-clean "./lib/ufo_awesome.tsv")
-        headers [:sighted_at :reported_at :location :shape :duration :description]
-        ]
+        headers [:sighted_at :reported_at :location :shape :duration :description]]
     (col-names data headers)
     ))
