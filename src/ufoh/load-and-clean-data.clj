@@ -1,5 +1,7 @@
-(ns load-and-clean
-  (:use [incanter core io]))
+(ns ufoh.load-and-clean
+  (:require [incanter.core :as core :refer [$ $map conj-cols col-names]]
+            [incanter.io :as io :refer [read-dataset]]
+            ))
 
 (defn load-clean [path]
   (let [data (read-dataset path :delim \tab)
